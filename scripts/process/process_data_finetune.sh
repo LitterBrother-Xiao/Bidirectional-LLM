@@ -1,0 +1,9 @@
+python ../..//tools/preprocess_data_fs.py \
+    --json-file xxx.jsonl \
+    --tokenizer-model xxx \
+    --tokenizer-type "HFTokenizer" \
+    --output-prefix xxxx \
+    --dataset-impl mmap \
+    --workers 16 \
+    --chunk-size 8 \
+    --log-interval 10000 \
