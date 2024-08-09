@@ -159,7 +159,7 @@ megatron_options=" \
     --clip-grad 1.0 \
     --fp16 \
     --load ${checkpoint_path} \
-    --save ${checkpoint_path}_new \
+    --save ${checkpoint_path} \
     --tensorboard-queue-size 1 \
     --log-timers-to-tensorboard \
     --log-batch-size-to-tensorboard \
