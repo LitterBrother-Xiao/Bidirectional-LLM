@@ -253,7 +253,7 @@ class GeBertModel(MegatronModule):
             state_dict_[self._word_embeddings_for_head_key] \
                 = self.word_embeddings.state_dict(prefix=prefix, keep_vars=keep_vars)
         return state_dict_
-
+ 
     def load_state_dict(self, state_dict, strict=True):
         """Customized load."""
         args = get_args()
@@ -262,9 +262,9 @@ class GeBertModel(MegatronModule):
         if self.post_process:
             self.lm_head.load_state_dict(
                 state_dict[self._lm_head_key], strict=strict)
-        # if args.length_predict:
-        #     self.length_head.load_state_dict(
-        #         state_dict[self._length_head_key], strict=strict)
+        if args.load_LP_module:
+            self.length_head.load_state_dict(
+                state_dict[self._length_head_key], strict=strict)
         # if self.post_process and self.add_binary_head:
         #     self.binary_head.load_state_dict(
         #         state_dict[self._binary_head_key], strict=strict)
