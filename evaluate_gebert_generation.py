@@ -42,7 +42,7 @@ def args_provider(parser):
     group.add_argument('--load-LP-module', action='store_true', help='if we load length prediction')
 
     # inferene args 
-    group.add_argument('--inf-type',type=str, default='diff_gram_based', help='')
+    group.add_argument('--inftype',type=str, default='diff_gram_based', help='')
     group.add_argument('--max-iter',type=int, default=1)
     group.add_argument('--length-beam', type=int, default=1, help='The length beam.')
     group.add_argument('--position-beam', type=int, default=1, help='The position beam number.')
