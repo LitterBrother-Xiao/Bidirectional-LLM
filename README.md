@@ -59,5 +59,6 @@
      - `position-beam`: set the position beam number if you adopt position beam search method.
      - `tokens-beam`: set the tokens beam number if you adopt tokens beam search method.
 
-## *Note*: this project is in progress，feel free to contact us for further improvements.
+## *Note*:  
+This project is in progress，feel free to contact us for further improvements.
 
