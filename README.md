@@ -29,11 +29,11 @@
 
 2. train the bi-directional LLM by running ```bash scripts/training/pretrain.sh``` with setting several parameters.  
    Most parameters are the same as those in official [`Megatron-LM`](https://github.com/NVIDIA/Megatron-LM) and [`Megatron-Deepspeed`](https://github.com/microsoft/Megatron-DeepSpeed) codebase, we list the additional parameters to support bi-directional training here.
-   ##### training related: different ways to train the bi-directional LLM.
+   #### Training related: different ways to train the bi-directional LLM.
    - `has-sentence-split`: include this if you need split the sentence to perform as conditional training.
    - `has-attention-masking`: include this if you need set the specific attention mask to prevent the source sequence attending to the target sequence.
    - `masked-x-type`: set your masking type for the source sequence, more information refers to `megatron/data/gebert_dataset.py`.
-   #### length related: NAR models usually need the know the target length during inference.
+   #### Length related: NAR models usually need the know the target length during inference.
    - `length-predict`: include this if you need predict the target length.
    - `max-predict-length`: set the maximum predicted target length.
    - `length-factor`: set the length loss factor.
@@ -60,5 +60,5 @@
      - `tokens-beam`: set the tokens beam number if you adopt tokens beam search method.
 
 ## *Note*:  
-This project is in progress，feel free to contact us for further improvements.
+*This project is in progress，feel free to contact us for further improvements.*
 
