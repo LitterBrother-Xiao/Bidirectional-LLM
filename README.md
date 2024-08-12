@@ -10,7 +10,7 @@
 ```bash
   pip install deepspeed
 ```
-4. Install megatron-core packages
+4. Install megatron-core packages   
    download this codebase and get into your own path, then  
   ```bash
     pip install -e .
