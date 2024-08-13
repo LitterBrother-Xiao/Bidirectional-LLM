@@ -17,7 +17,7 @@
   ```
 
 ### Try to run quickly
-1. prepare your pretrained data by running ```bash scripts/process/process_data.sh``` with setting several parameter.  
+1. prepare your pretrained data by running ```bash scripts/process/process_data.sh``` with setting several parameter:    
    We list the important parameters here.
    - `json-file`: set the path of your data file here, supporting parquet and jsonl files now.
    - `file-type`: set parquet or jsonl.
@@ -27,7 +27,7 @@
    - `output-prefix`: set your processed data file.
    - `group-size`: set your processed text length.
 
-2. train the bi-directional LLM by running ```bash scripts/training/pretrain.sh``` with setting several parameters.  
+2. train the bi-directional LLM by running ```bash scripts/training/pretrain.sh``` with setting several parameters:   
    Most parameters are the same as those in official [`Megatron-LM`](https://github.com/NVIDIA/Megatron-LM) and [`Megatron-Deepspeed`](https://github.com/microsoft/Megatron-DeepSpeed) codebase, we list the additional parameters to support bi-directional training here.
    #### Training related: different ways to train the bi-directional LLM.
    - `has-sentence-split`: include this if you need split the sentence to perform as conditional training.
